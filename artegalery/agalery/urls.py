@@ -5,8 +5,8 @@ from agalery.views import *
 
 urlpatterns = [
     path("", views.inicio),
-    path('usuarios/', views.usuario),
-    path('artistas/', views.artista),
-    path('obras/', views.obra),
-    path('compradores/', views.comprador),
+    path('usuario/', views.usuario),
+    path('artista/', views.artista),
+    path('obra/', views.obra),
+    path('comprador/', views.comprador),
       ]

@@ -7,21 +7,21 @@ from agalery.models import *
 # Create your views here.
 
 def inicio(request):
-    #return render(request, 'agalery/inicio.html')
-    return HttpResponse('inicio')
+    return render(request, 'agalery/inicio.html')
+   # return HttpResponse('inicio')
 
 def usuario(request):
-    #return render(request, 'agalery/usuarios.html')
-    return HttpResponse('USUARIO')
+    return render(request, 'agalery/inicio.html')
+    #return HttpResponse('USUARIO')
 
 def artista(request):
-    #return render(request, 'agalery/artistas.html')
-    return HttpResponse('artista')
+    return render(request, 'agalery/artista.html')
+    #return HttpResponse('artista')
 
 def obra(request):
-    #return render(request, 'agalery/obras.html')
-    return HttpResponse('obra') 
+    return render(request, 'agalery\obra.html')
+    #return HttpResponse('obra') 
 
 def comprador(request):
-   # return render(request, 'agalerycompradores.html')
-    return HttpResponse('Comprador')
+    return render(request, 'galery/comprador.html')
+    #return HttpResponse('Comprador')

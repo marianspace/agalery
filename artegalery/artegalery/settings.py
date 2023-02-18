@@ -55,7 +55,7 @@ ROOT_URLCONF = 'artegalery.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['agalery/template', 'agalery/static'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

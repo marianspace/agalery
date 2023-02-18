@@ -6,7 +6,7 @@ class usuario(models.Model):
     usuario = models.CharField(max_length=20) # debería ser nexo entre todas la tablas 
     clave = models.CharField(max_length=10, help_text="Contraseña alfanumerica de diez caracteres")
     
-    def _str_(self):
+    def __str__(self):
      return f"Ususario{self.mail}"
  
  
@@ -28,7 +28,7 @@ class obra(models.Model):
     precio = models.IntegerField(default=1) 
     vendida = models.BooleanField(default= False)
     
-    def _str_(self):
+    def __str__(self):
         return f'{self.artista} {self.titulo}'
  
 class comprador(models.Model):
