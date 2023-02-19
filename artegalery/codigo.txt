@@ -1,0 +1,16 @@
+"""        
+mifform = registrouser(request.POST)
+print(mifform)
+if mifform.is_valid:
+info = mifform.cleaned_data
+mifform = usuario(info['usuario'], info['clave'], info['mail'])
+mifform.save()
+return render(request, 'agalery/registroac.html') # pagina de registro de tipo de usuario 
+else: 
+mifform = registrouser(request)
+return render(request, 'agalery/registrouser.html')
+#,{'mifform':mifform}  
+def buscarobra(request):
+if request.GET['obra']:
+obras = request.GET['obra']
+"""        

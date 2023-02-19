@@ -7,7 +7,7 @@ class usuario(models.Model):
     clave = models.CharField(max_length=10, help_text="Contraseña alfanumerica de diez caracteres")
     
     def __str__(self):
-     return f"Ususario{self.mail}"
+     return f"Ususario {self.usuario}"
  
  
 class artista(models.Model):

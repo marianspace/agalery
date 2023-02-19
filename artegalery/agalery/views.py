@@ -25,3 +25,7 @@ def obra(request):
 def comprador(request):
     return render(request, 'galery/comprador.html')
     #return HttpResponse('Comprador')
+    
+def ingresar(request):
+    return render(request, 'agalery/ingresar.html')
+    #return HttpResponse('Comprador')
