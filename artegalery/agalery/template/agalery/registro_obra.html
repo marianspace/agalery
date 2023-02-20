@@ -1,0 +1,10 @@
+{% extends "agalery/padre.html"%}
+{% load static %}
+{% block contenidoquecambia %}
+<form action='obraregistro' method='POST'> {% csrf_token %}
+<table>
+{{ obraregistro.as_table}}
+</table>
+<input typer='submit' value='Enviar'>
+</form>
+{% endblock %}

@@ -1399,7 +1399,7 @@ progress {
 
   .col-lg-8 {
     flex: 0 0 auto;
-    width: 66.66666667%;
+    width: 50%;
   }
 
   .col-lg-9 {
@@ -11291,11 +11291,11 @@ html {
 }
 
 header {
-  padding-top: 9.5rem;
+  padding-top: 6rem;
   padding-bottom: 6rem;
 }
 
 section {
-  padding-top: 9rem;
-  padding-bottom: 9rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }

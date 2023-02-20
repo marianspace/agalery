@@ -1,0 +1,29 @@
+{% extends "agalery/padre.html"%}
+{% load static %}
+{% block contenidoquecambia %}
+    <h3>Buscador de Obras</h3>
+    <form action="{% url 'buscarobras' %}" method="get">
+        <label for="titulo">Buscar por Título:</label>
+        <input type="text" id="titulo" name="titulo" value="{{ request.GET.titulo }}">
+        <button type="submit">Buscar</button>
+    </form>
+    {% if resultados %}
+    <h3 >Estos son los Resultados:</h3>
+    <ul>
+        {% for obra in resultados %}
+        <li><b>Obra: </b>{{ obra.titulo }} <b>| Artista: </b> {{ obra.artista }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+{% endblock %}
+<!---p> estamos buscando el: {{busqueda}}</p>
+{% if obras %}
+<ul>
+{% for obra in obras %}
+<li> {{obra.titulo]] </li>
+<li> {{obra.descripcion]] </li>
+<li> {{obra.precio]] </li>
+</ul>
+{% endfor %}
+{% endif %}
+

@@ -14,3 +14,56 @@ def buscarobra(request):
 if request.GET['obra']:
 obras = request.GET['obra']
 """        
+
+formularios
+def registroobra(request):
+    if request.method == 'POST':
+       obraregistro = registroobra(request.post)
+       print(obraregistro)
+       if obraregistro.is_valid:
+          comtexto = obraregistro.cleaned_data
+          obras = obra(titulo=comtexto["titulo"], descripcion=comtexto['descripcion'], precio=comtexto['valor'])
+          obras.save()
+    else:
+       #obraregistro = registroobra() # error registroobra() missing 1 required positional argument: 'request'
+       return render(request,'agalery/registro_obra.html')
+      # , {'obraregistro':obraregistro} # cannot access local variable 'obraregistro' where it is not associated with a value
+
+
+      def listadeobras(request):
+    obra = obra.objects.all()
+    return render(request, 'leerobras.html', {'obra':obra})
+    
+
+def busqueda_obra(request):
+    return render(request, 'agalery/buscar_obra.html')
+
+def buscar(request):
+   if request.GET.post['titulo']:
+       obras = request.GET.post['titulo']
+       obras = obra.objects.filter(Q(titulo_icontains=buscar))
+       return render(request,'agalery/keerobras.html', {'titulo':obra})
+   else:
+    return HttpResponse('No hay datos')
+
+def leerobras(request):
+    obra = obra
+    obra = obra.objects.all()
+    contexto = {"obra":obra}
+    return render(request, "AppCoder/leerobra.html", contexto)
+    
+    """   
+    if request.GET["obra"]: 
+      obras = request.GET["obra"]
+      obra = obra.objects.filter(obra_icontrains=obras)
+      return render(request, 'agalery/buscar_obra.html')
+   else:
+      mensaje= 'no has introducido nada'
+      return HttpResponse('respusta') 
+     """
+
+Coodigo que funciono pero me daba que query no podía ser valor NONE
+def buscarobras(request):
+    query = request.GET.get('titulo')
+    resultados = obra.objects.filter(titulo__icontains=query)
+    return render(request, 'leerobras.html', {'resultados': resultados})

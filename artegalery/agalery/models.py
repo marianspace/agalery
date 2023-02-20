@@ -4,7 +4,7 @@ from django.db import models
 class usuario(models.Model):
     mail = models.EmailField(max_length=100) 
     usuario = models.CharField(max_length=20) # debería ser nexo entre todas la tablas 
-    clave = models.CharField(max_length=10, help_text="Contraseña alfanumerica de diez caracteres")
+    clave = models.CharField(max_length=8, help_text="Contraseña alfanumerica de diez caracteres")
     
     def __str__(self):
      return f"Ususario {self.usuario}"
