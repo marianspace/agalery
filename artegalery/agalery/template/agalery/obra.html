@@ -1,8 +1,9 @@
 {% extends "agalery/padre.html"%}
 {% load static %}
 {% block contenidoquecambia %}
+<h5><a href="{% url 'nuevaobra' %}" type="submit">Registrar nueva obra</a></h5>
 <h3>Listado de obras disponibles</h3>
 {% for obra in obras %}
-    <li><b>{{ obra.titulo }}</b> - {{ obra.descripcion }}</li>
+    <li><b>{{obra.artista}} - <FONT COLOR="blue">{{ obra.titulo }}</FONT></b> - {{ obra.descripcion }}</li>
 {% endfor %}
 {% endblock %}

@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class usuario(models.Model):
+class user(models.Model):
     mail = models.EmailField(max_length=100) 
     usuario = models.CharField(max_length=20) # debería ser nexo entre todas la tablas 
     clave = models.CharField(max_length=8, help_text="Contraseña alfanumerica de diez caracteres")
@@ -11,7 +11,7 @@ class usuario(models.Model):
  
  
 class artista(models.Model):
-    usuario = models.ForeignKey(usuario, verbose_name="Usuario Artista", default=1, on_delete=models.SET_DEFAULT) 
+    usuario = models.ForeignKey(user, verbose_name="Usuario Artista", default=1, on_delete=models.SET_DEFAULT) 
     nombre = models.CharField(max_length=100, help_text="Nombre") 
     apellido = models.CharField(max_length=100, help_text="Apellido")
     bio = models.TextField(max_length=300, help_text="Descripción de la obre en 300 caracteres")
@@ -32,7 +32,7 @@ class obra(models.Model):
         return f'{self.artista} {self.titulo}'
  
 class comprador(models.Model):
-    usuario = models.ForeignKey(usuario, verbose_name="Usuario Comprador", default=1, on_delete=models.SET_DEFAULT)  
+    usuario = models.ForeignKey(user, verbose_name="Usuario Comprador", default=1, on_delete=models.SET_DEFAULT)  
     nombre = models.CharField(max_length=100, help_text="Nombre") 
     apellido = models.CharField(max_length=100, help_text="Apellido")
     

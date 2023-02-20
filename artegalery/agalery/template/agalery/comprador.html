@@ -1,6 +1,9 @@
 {% extends "agalery/padre.html"%}
 {% load static %}
 {% block contenidoquecambia %}
-Listado de Cojmpradores de arte
+<h3><FONT COLOR="blue">Mecenas</FONT></h3>
+{% for comprador in comprar %}
+    <li><b>{{ comprador.nombre }}</b> - {{ comprador.apellido }}</li>
+{% endfor %}
+-- Próximamente registro --
 {% endblock %}
-

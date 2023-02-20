@@ -1,10 +1,10 @@
 {% extends "agalery/padre.html"%}
 {% load static %}
 {% block contenidoquecambia %}
-<h3><FONT COLOR="blue">Crear usuario</FONT></h3>
+<h3><FONT COLOR="blue">Crear Artista</FONT></h3>
 {% block content %}
 <form method="post"> {% csrf_token %}
-  {{ user.as_table }}
+  {{ artist.as_table }}
   <button type="submit">Guardar</button>
 </form>
 {% endblock %}

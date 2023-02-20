@@ -67,3 +67,43 @@ def buscarobras(request):
     query = request.GET.get('titulo')
     resultados = obra.objects.filter(titulo__icontains=query)
     return render(request, 'leerobras.html', {'resultados': resultados})
+
+#  # no funca
+#     if request.method == 'POST':
+#         user = registrouser(request.POST)
+#         if user.is_valid():
+#             user.save()
+#             return render(request, 'agalery/usuario.html')
+#     else:
+#         user = registrouser()
+#     return render(request, 'agalery/crear_user.html', {'user': user})
+    
+    
+    # def crear_user(request): # otra formaula
+    # if request.method == 'POST':
+    #     form = registrouser(request.POST)
+    #     if form.is_valid():
+    #         user = usuario(
+    #             mail=form.cleaned_data['mail'],
+    #             usuario=form.cleaned_data['usuario'],
+    #             clave=form.cleaned_data['clave']
+    #         )
+    #         user.save()  # Guarda
+    #         return render('agalery/usuario.html')
+    # else:
+    #     form = registrouser()
+    # return render(request, 'agalery/crear_user.html', {'form': form})
+    
+    
+    
+    
+    
+    # form = registrouser(request.POST)
+    # #if request.method == 'POST':
+    # #    form = registrouser(request.POST)
+    # if form.is_valid():
+    #     user = form.save()
+    #     return render(request, 'agalery/usuario.html', {'usuario':usuario})
+    # else:
+    #     form = registrouser()
+    # return render(request, 'agalery/crear_user.html', {'form': form})

@@ -235,11 +235,14 @@ sup {
 }
 
 a {
-  color: #0d6efd;
-  text-decoration: underline;
+  color: blue;
+  flex: bold;
+  background-color: #a5c3f8;
+  padding: 13px;
+  text-decoration: none;
 }
 a:hover {
-  color: #0a58ca;
+  color: blue;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -333,12 +336,19 @@ label {
   display: inline-block;
 }
 
-button {
-  border-radius: 0;
+#content {
+  text-align: center;
 }
 
+button {
+  border-radius: 1;
+  border-color: #0b5ed7;
+  background-color: #0b5ed7;
+  color: white; 
+  }
+
 button:focus:not(:focus-visible) {
-  outline: 0;
+  outline: 1;
 }
 
 input,
@@ -352,15 +362,6 @@ textarea {
   line-height: inherit;
 }
 
-button,
-select {
-  text-transform: none;
-}
-
-[role=button] {
-  cursor: pointer;
-}
-
 select {
   word-wrap: normal;
 }
@@ -370,19 +371,6 @@ select:disabled {
 
 [list]::-webkit-calendar-picker-indicator {
   display: none;
-}
-
-button,
-[type=button],
-[type=reset],
-[type=submit] {
-  -webkit-appearance: button;
-}
-button:not(:disabled),
-[type=button]:not(:disabled),
-[type=reset]:not(:disabled),
-[type=submit]:not(:disabled) {
-  cursor: pointer;
 }
 
 ::-moz-focus-inner {

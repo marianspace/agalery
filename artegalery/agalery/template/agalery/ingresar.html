@@ -1,5 +1,25 @@
 {% extends "agalery/padre.html"%}
 {% load static %}
 {% block contenidoquecambia %}
-Página de login - una vez ingresado como artista puede cargar el formulario de obra
+<html>
+  <head>
+    <title><FONT COLOR="blue">Ingreso</FONT></title>
+    <style>
+        #miDiv {
+          width: 200px;
+          height: 200px;
+          background-color: #ccc;
+          margin: auto;
+        }
+      </style>
+    </head>
+    <body>
+        <div style="display: inline-block;">
+           <a href="{% url 'usuarionuevo' %}" type="submit">Nuevo Usuario</a>
+           <a href="{% url 'nuevoart' %}" type="submit">Artista</a>
+           <a href="{% url 'mecenas' %}" type="submit">Comprador</a>
+        </div>
+    </body>
+</html>
+
 {% endblock %}

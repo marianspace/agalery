@@ -1,7 +1,7 @@
 {% extends "agalery/padre.html"%}
 {% load static %}
 {% block contenidoquecambia %}
-<h3>Listado de artistas</h3>
+<h3><FONT COLOR="blue">Artistas online</FONT></h3>
 {% for artista in art %}
     <li><b>{{ artista.nombre }}</b> - {{ artista.apellido }}</li>
 {% endfor %}
